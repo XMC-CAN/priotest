@@ -1,0 +1,42 @@
+VERSION "HIPBNYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY/4/%%%/4/'%**4YYY///"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+
+BS_:
+
+BU_: XMC_Prio XMC_Flooder PC
+
+
+BO_ 0 ControlMsg: 8 PC
+ SG_ Command : 56|8@1- (1,0) [0|1] ""  XMC_Prio,XMC_Flooder
+
+BO_ 1024 FloodMsg: 8 XMC_Flooder
+ SG_ Trq_Drive_ref : 32|32@1- (1.19209e-007,0) [0|0] ""  PC
+ SG_ Trq_BrakeBoosterReq : 0|32@1- (3.72529e-009,0) [0|0] ""  PC
+
+
+CM_ SG_ 0 Command "";
+CM_ SG_ 1024 Trq_Drive_ref "2**-23";
+CM_ SG_ 1024 Trq_BrakeBoosterReq "2**-28";
+VAL_ 0 Command 0 "Deactivate" 1 "Activate" ;
